@@ -29,8 +29,8 @@ nosetests.xml
 
 # Translations
 *.mo
-
-# Mr Developer
-.mr.developer.cfg
+mr.developer.cfg
 .project
 .pydevproject
+
+venv
