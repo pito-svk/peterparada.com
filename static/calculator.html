@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Calculator</title>
+    </head>
+<body>
+ <form oninput="x.value=best_calculator(numerator.value,denumerator.value,decimal_length.value)">
+     <script>function best_calculator(numerator, denumerator, n){
+    var numerator = parseInt(numerator);
+    var denumerator = parseInt(denumerator);
+    var n = parseInt(n) || 10;
+    var result = "";
+    while(true){
+        if(numerator >= denumerator){
+            var value = parseInt(numerator / denumerator);
+            result += value.toString();
+            numerator -= (value*denumerator);
+            if(numerator == 0){
+                return result;
+            }
+            else if(result.indexOf(".") == -1){
+                result += ".";
+            }
+            var increase = false;    
+            
+        }
+        else{
+            if(result.indexOf(".") == -1){
+                result += "0.";
+            }
+            else if(increase == true){
+                result += "0";
+            }
+            numerator *= 10;
+            var increase = true;
+        }
+        if(result.substring([result.indexOf(".")]).length == n+1){
+            return result;
+        }
+    }
+
+}
+</script>
+    <input type="number" id="numerator" value="22" style="width:40px;"> NUMERATOR
+  /<input type="number" id="denumerator" value="7" style="width:40px;"> DENUMERATOR
+  <br>
+  <input type="number" id="decimal_length" value="10" style="width:40px;"> DECIMAL LENGTH
+  =<output name="x" style="color:red;"></output>
+</form>      
+
+</body>
+</html>

@@ -9,6 +9,10 @@ app = Flask(__name__, static_folder='static', static_url_path='',
 def index():
     return render_template("index.html")
 
+@app.route('/calculator')
+def calculator():
+    return render_template("calculator.html")    
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
