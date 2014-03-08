@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Best Calculator</title>
     </head>
 <body>
- <form oninput="x.value=best_calculator(numerator.value,denumerator.value,decimal_length.value)">
+ <form oninput="x.value = best_calculator(numerator.value,denumerator.value,decimal_length.value)">
      <script>function best_calculator(numerator, denumerator, n){
     var numerator = parseInt(numerator);
     var denumerator = parseInt(denumerator);
@@ -42,10 +43,17 @@
 }
 </script>
     <input type="number" id="numerator" value="22" style="width:40px;"> NUMERATOR
-  /<input type="number" id="denumerator" value="7" style="width:40px;"> DENUMERATOR
+    <br>
+  <input type="number" id="denumerator" value="7" style="width:40px;"> DENUMERATOR
+  <br>
+  
+  =   <output name="x" style="color:red;" value="5">3.1428571428</output>
+
+
+  <br>
+  <br>
   <br>
   <input type="number" id="decimal_length" value="10" style="width:40px;"> DECIMAL LENGTH
-  =<output name="x" style="color:red;"></output>
 </form>      
 
 </body>
